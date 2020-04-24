@@ -1,0 +1,18 @@
+{
+  "name": "@leandromatos/stylelint-config",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/leandromatos/stylelint-config",
+  "author": "Leandro Matos",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "index.js"
+  ],
+  "peerDependencies": {
+    "stylelint": ">=13.3"
+  },
+  "dependencies": {
+    "stylelint": "^13.3.3"
+  }
+}
