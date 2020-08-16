@@ -10,7 +10,7 @@
     "index.js"
   ],
   "peerDependencies": {
-    "stylelint": ">=13.3"
+    "stylelint": ">=13.6"
   },
   "dependencies": {
     "stylelint": "^13.3.3"
