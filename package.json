@@ -4,15 +4,13 @@
   "main": "index.js",
   "repository": "https://github.com/leandromatos/stylelint-config",
   "author": "Leandro Matos",
-  "license": "MIT",
-  "private": false,
   "files": [
     "index.js"
   ],
-  "peerDependencies": {
-    "stylelint": ">=13.6"
-  },
   "dependencies": {
-    "stylelint": "^13.3.3"
+    "@leandromatos/prettier-config": "^0.0.2-0",
+    "prettier": "^2.0.5",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint": "^13.6.1"
   }
 }

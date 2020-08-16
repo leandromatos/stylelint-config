@@ -2,16 +2,20 @@
 
 ### Setup
 
-Use yarn to install stylelint and custom config:
+Use yarn to install Stylelint and custom config:
 
-```bash
+```sh
 yarn add --dev stylelint @leandromatos/stylelint-config
 ```
 
-Create a new `.stylelint.config.js` file and export an object containing your settings:
+Create a new `.stylelintrc.js` file and export an object containing your settings:
 
 ```js
 module.exports = {
-  ...require("@leandromatos/stylelint-config"),
-};
+  ...require('@leandromatos/stylelint-config'),
+}
 ```
+
+---
+
+&copy; All rights reserved

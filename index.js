@@ -1,16 +1,18 @@
 module.exports = {
+  plugins: ['stylelint-prettier'],
   rules: {
-    "color-hex-length": "long",
-    "declaration-property-value-blacklist": {
-      "/^border/": [""],
+    'prettier/prettier': true,
+    'color-hex-length': 'long',
+    'declaration-property-value-blacklist': {
+      '/^border/': [''],
     },
-    "font-family-name-quotes": "always-where-recommended",
+    'font-family-name-quotes': 'always-where-recommended',
     indentation: 2,
-    "selector-attribute-quotes": "always",
-    "selector-max-id": null,
-    "selector-pseudo-element-colon-notation": "single",
-    "string-quotes": "single",
-    "value-list-max-empty-lines": 0,
-    "value-no-vendor-prefix": null,
+    'selector-attribute-quotes': 'always',
+    'selector-max-id': null,
+    'selector-pseudo-element-colon-notation': 'single',
+    'string-quotes': 'single',
+    'value-list-max-empty-lines': 0,
+    'value-no-vendor-prefix': null,
   },
-};
+}
