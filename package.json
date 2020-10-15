@@ -7,10 +7,15 @@
   "files": [
     "index.js"
   ],
+  "scripts": {
+    "lint": "yarn run prettier '**/*.{js,json,md,yml}' --write && yarn run eslint . --fix"
+  },
   "dependencies": {
-    "@leandromatos/prettier-config": "^0.0.2-0",
-    "prettier": "^2.0.5",
-    "stylelint-prettier": "^1.1.2",
-    "stylelint": "^13.6.1"
+    "@leandromatos/eslint-config": "^0.0.11",
+    "@leandromatos/prettier-config": "^0.0.6",
+    "eslint": "^7.11.0",
+    "prettier": "^2.1.2",
+    "stylelint": "^13.7.2",
+    "stylelint-prettier": "^1.1.2"
   }
 }
