@@ -3,7 +3,7 @@ module.exports = {
   rules: {
     'prettier/prettier': true,
     'color-hex-length': 'long',
-    'declaration-property-value-blacklist': {
+    'declaration-property-value-disallowed-list': {
       '/^border/': [''],
     },
     'font-family-name-quotes': 'always-where-recommended',
