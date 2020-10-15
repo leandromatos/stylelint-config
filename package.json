@@ -8,7 +8,7 @@
     "index.js"
   ],
   "scripts": {
-    "lint": "yarn run prettier '**/*.{js,json,md,yml}' --write && yarn run eslint . --fix"
+    "lint": "yarn run prettier '**/*.{js,json,md,yml}' --write && yarn run eslint . --fix && yarn run stylelint '**/*.{css,scss,sass}'"
   },
   "dependencies": {
     "stylelint": "^13.7.2",
