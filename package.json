@@ -15,9 +15,9 @@
     "stylelint-prettier": "^1.1.2"
   },
   "devDependencies": {
-    "@leandromatos/eslint-config": "^0.0.11",
-    "@leandromatos/prettier-config": "^0.0.7",
-    "eslint": "^7.11.0",
+    "@leandromatos/eslint-config": "^0.0.14",
+    "@leandromatos/prettier-config": "^0.0.8",
+    "eslint": "^7.12.1",
     "prettier": "^2.1.2"
   }
 }
