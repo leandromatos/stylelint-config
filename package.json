@@ -11,13 +11,13 @@
     "lint": "yarn run prettier '**/*.{js,json,md,yml}' --write && yarn run eslint . --fix && yarn run stylelint '**/*.{css,scss,sass}'"
   },
   "dependencies": {
-    "stylelint": "^13.7.2",
+    "stylelint": "^13.8.0",
     "stylelint-prettier": "^1.1.2"
   },
   "devDependencies": {
-    "@leandromatos/eslint-config": "^0.0.14",
-    "@leandromatos/prettier-config": "^0.0.8",
-    "eslint": "^7.12.1",
-    "prettier": "^2.1.2"
+    "@leandromatos/eslint-config": "^0.0.15",
+    "@leandromatos/prettier-config": "^0.0.9",
+    "eslint": "^7.16.0",
+    "prettier": "^2.2.1"
   }
 }
