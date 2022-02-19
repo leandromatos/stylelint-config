@@ -1,5 +1,6 @@
 module.exports = {
-  plugins: ['stylelint-config-standard', 'stylelint-config-standard-scss', 'stylelint-prettier'],
+  plugins: ['stylelint-config-standard', 'stylelint-prettier'],
+  extends: ['stylelint-config-standard-scss', 'stylelint-config-recommended-vue/scss'],
   rules: {
     'prettier/prettier': true,
     'color-hex-length': 'long',
