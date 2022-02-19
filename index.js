@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ['stylelint-prettier'],
+  plugins: ['stylelint-config-standard', 'stylelint-config-standard-scss', 'stylelint-prettier'],
   rules: {
     'prettier/prettier': true,
     'color-hex-length': 'long',
