@@ -122,10 +122,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@leandromatos/eslint-config@^0.0.16":
-  version "0.0.16"
-  resolved "https://registry.yarnpkg.com/@leandromatos/eslint-config/-/eslint-config-0.0.16.tgz#26b43dd426719d918225c782de66787b82c128c5"
-  integrity sha512-6s5pPN2UDH1+osjqQ0sc1GoWmgbnhQw04tUquoC3SCaVd0PIFq9bHN2pzpTWhRlehaF0UmW5wo70HOs0ZBcQiQ==
+"@leandromatos/eslint-config@^0.0.17":
+  version "0.0.17"
+  resolved "https://registry.yarnpkg.com/@leandromatos/eslint-config/-/eslint-config-0.0.17.tgz#7ad39cc9f1aa237c27bd386a62c37a373748dc09"
+  integrity sha512-puI3EHSydPLGdJhnwOgPZokGtzPebshme1OkwfRy2gfU8lMn+YmgG6gT8mi4g4imYkwxgdnyJOgjY4g0yXwTjw==
   dependencies:
     babel-eslint "^10.1.0"
     eslint "^8.9.0"
