@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['stylelint-config-standard', 'stylelint-config-standard-scss', 'stylelint-config-recommended-vue/scss'],
+  extends: ['stylelint-config-standard', 'stylelint-config-standard-scss'],
   plugins: ['stylelint-prettier'],
   rules: {
     'alpha-value-notation': null,
