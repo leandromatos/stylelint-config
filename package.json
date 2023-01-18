@@ -1,6 +1,6 @@
 {
   "name": "@leandromatos/stylelint-config",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "index.js",
   "repository": "https://github.com/leandromatos/stylelint-config",
   "author": "Leandro Matos",
