@@ -1,26 +1,6 @@
 module.exports = {
-  extends: [
-    "stylelint-config-standard",
-    "stylelint-config-standard-scss",
-    "stylelint-config-prettier",
-    "stylelint-config-rational-order",
-  ],
-  overrides: [
-    {
-      files: ["**/*.scss"],
-      extends: ["stylelint-config-standard-scss", "stylelint-config-prettier", "stylelint-config-rational-order"],
-    },
-    {
-      files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
-      extends: [
-        "stylelint-config-recommended",
-        "stylelint-config-prettier",
-        "stylelint-config-rational-order",
-        "stylelint-config-styled-components",
-      ],
-      customSyntax: "postcss-jsx",
-    },
-  ],
+  extends: ["stylelint-config-recommended", "stylelint-config-prettier"],
+  plugins: ["stylelint-prettier"],
   rules: {
     "alpha-value-notation": null,
     "at-rule-no-vendor-prefix": null,
@@ -32,7 +12,8 @@ module.exports = {
     "declaration-colon-newline-after": null,
     "font-family-name-quotes": "always-where-recommended",
     "hue-degree-notation": null,
-    indentation: 2,
+    indentation: [2, { baseIndentLevel: 1 }],
+    "prettier/prettier": true,
     "keyframes-name-pattern": null,
     "length-zero-no-unit": null,
     "max-line-length": null,
@@ -40,11 +21,9 @@ module.exports = {
     "no-empty-source": null,
     "no-invalid-position-at-import-rule": null,
     "number-max-precision": null,
-    "prettier/prettier": true,
     "property-no-unknown": null,
     "property-no-vendor-prefix": null,
     "scss/at-rule-conditional-no-parentheses": null,
-    "scss/double-slash-comment-empty-line-before": null,
     "selector-attribute-quotes": "always",
     "selector-class-pattern": null,
     "selector-id-pattern": null,
@@ -58,4 +37,20 @@ module.exports = {
     "value-list-max-empty-lines": 0,
     "value-no-vendor-prefix": null,
   },
+  overrides: [
+    {
+      files: ["**/*.scss"],
+      customSyntax: "postcss-scss",
+      extends: ["stylelint-config-recommended-scss", "stylelint-config-prettier-scss"],
+    },
+    {
+      files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+      customSyntax: "postcss-jsx",
+      extends: [
+        "stylelint-config-recommended-scss",
+        "stylelint-config-prettier-scss",
+        "stylelint-config-styled-components",
+      ],
+    },
+  ],
 };

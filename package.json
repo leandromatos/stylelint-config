@@ -5,22 +5,20 @@
   "repository": "https://github.com/leandromatos/stylelint-config",
   "author": "Leandro Matos",
   "files": [
-    "index.js",
-    "react.js"
+    "index.js"
   ],
   "dependencies": {
+    "@stylelint/postcss-css-in-js": "^0.38.0",
     "postcss": "^8.4.21",
-    "postcss-html": "^1.5.0",
     "postcss-jsx": "^0.36.4",
     "postcss-scss": "^4.0.6",
+    "postcss-syntax": "^0.36.2",
     "stylelint": "^14.16.1",
     "stylelint-config-prettier": "^9.0.4",
-    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-recommended": "^9.0.0",
     "stylelint-config-recommended-scss": "^8.0.0",
-    "stylelint-config-standard": "^29.0.0",
-    "stylelint-config-standard-scss": "^6.1.0",
     "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-order": "^6.0.1"
-  },
-  "devDependencies": {}
+    "stylelint-prettier": "^2.0.0"
+  }
 }
