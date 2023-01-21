@@ -12,7 +12,6 @@ module.exports = {
     "declaration-colon-newline-after": null,
     "font-family-name-quotes": "always-where-recommended",
     "hue-degree-notation": null,
-    indentation: [2, { baseIndentLevel: 1 }],
     "prettier/prettier": true,
     "keyframes-name-pattern": null,
     "length-zero-no-unit": null,
@@ -44,6 +43,14 @@ module.exports = {
       extends: ["stylelint-config-recommended-scss", "stylelint-config-prettier-scss"],
     },
     {
+      files: ["**/*.vue"],
+      extends: ["stylelint-config-recommended-scss", "stylelint-config-prettier-scss"],
+      customSyntax: "postcss-html",
+      rules: {
+        indentation: 2,
+      },
+    },
+    {
       files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
       customSyntax: "postcss-jsx",
       extends: [
@@ -51,6 +58,9 @@ module.exports = {
         "stylelint-config-prettier-scss",
         "stylelint-config-styled-components",
       ],
+      rules: {
+        indentation: [2, { baseIndentLevel: 1 }],
+      },
     },
   ],
 };
