@@ -566,11 +566,6 @@ fast-deep-equal@^3.1.1:
   resolved "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz"
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
 
-fast-diff@^1.1.2:
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/fast-diff/-/fast-diff-1.2.0.tgz"
-  integrity sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==
-
 fast-glob@^3.2.12, fast-glob@^3.2.9:
   version "3.2.12"
   resolved "https://registry.npmjs.org/fast-glob/-/fast-glob-3.2.12.tgz"
@@ -1177,18 +1172,6 @@ postcss@^8.4.0, postcss@^8.4.21:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-prettier-linter-helpers@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/prettier-linter-helpers/-/prettier-linter-helpers-1.0.0.tgz"
-  integrity sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==
-  dependencies:
-    fast-diff "^1.1.2"
-
-prettier@^2.8.4:
-  version "2.8.4"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.4.tgz#34dd2595629bfbb79d344ac4a91ff948694463c3"
-  integrity sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==
-
 punycode@^2.1.0:
   version "2.2.0"
   resolved "https://registry.npmjs.org/punycode/-/punycode-2.2.0.tgz"
@@ -1369,18 +1352,6 @@ style-search@^0.1.0:
   resolved "https://registry.npmjs.org/style-search/-/style-search-0.1.0.tgz"
   integrity sha512-Dj1Okke1C3uKKwQcetra4jSuk0DqbzbYtXipzFlFMZtowbF1x7BKJwB9AayVMyFARvU8EDrZdcax4At/452cAg==
 
-stylelint-config-prettier-scss@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.npmjs.org/stylelint-config-prettier-scss/-/stylelint-config-prettier-scss-0.0.1.tgz"
-  integrity sha512-lBAYG9xYOh2LeWEPC/64xeUxwOTnQ8nDyBijQoWoJb10/bMGrUwnokpt8jegGck2Vbtxh6XGwH63z5qBcVHreQ==
-  dependencies:
-    stylelint-config-prettier ">=9.0.3"
-
-stylelint-config-prettier@>=9.0.3:
-  version "9.0.4"
-  resolved "https://registry.npmjs.org/stylelint-config-prettier/-/stylelint-config-prettier-9.0.4.tgz"
-  integrity sha512-38nIGTGpFOiK5LjJ8Ma1yUgpKENxoKSOhbDNSemY7Ep0VsJoXIW9Iq/2hSt699oB9tReynfWicTAoIHiq8Rvbg==
-
 stylelint-config-recommended-scss@^9.0.1:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/stylelint-config-recommended-scss/-/stylelint-config-recommended-scss-9.0.1.tgz#7ea233ea637ac2d8f0b50d8aad236257e44e2cbb"
@@ -1404,13 +1375,6 @@ stylelint-config-styled-components@^0.1.1:
   version "0.1.1"
   resolved "https://registry.npmjs.org/stylelint-config-styled-components/-/stylelint-config-styled-components-0.1.1.tgz"
   integrity sha512-z5Xz/9GmvxO6e/DLzBMwkB85zHxEEjN6K7Cj80Bi+o/9vR9eS3GX3E9VuMnX9WLFYulqbqLtTapGGY28JBiy9Q==
-
-stylelint-prettier@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-prettier/-/stylelint-prettier-3.0.0.tgz#57028b99866ed4c3ae045ddd891bf9a77d274726"
-  integrity sha512-kIks1xw6np0zElokMT2kP6ar3S4MBoj6vUtPJuND1pFELMpZxVS/0uHPR4HDAVn0WAD3I5oF0IA3qBFxBpMkLg==
-  dependencies:
-    prettier-linter-helpers "^1.0.0"
 
 stylelint-scss@^4.4.0:
   version "4.5.0"

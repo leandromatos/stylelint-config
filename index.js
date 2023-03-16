@@ -1,6 +1,5 @@
 module.exports = {
   extends: ['stylelint-config-recommended'],
-  plugins: ['stylelint-prettier'],
   rules: {
     'alpha-value-notation': null,
     'at-rule-no-vendor-prefix': null,
@@ -10,7 +9,6 @@ module.exports = {
     'declaration-block-no-redundant-longhand-properties': null,
     'font-family-name-quotes': 'always-where-recommended',
     'hue-degree-notation': null,
-    'prettier/prettier': true,
     'keyframes-name-pattern': null,
     'length-zero-no-unit': null,
     'no-descending-specificity': null,
@@ -32,17 +30,11 @@ module.exports = {
     {
       files: ['**/*.scss'],
       customSyntax: 'postcss-scss',
-      extends: [
-        'stylelint-config-recommended-scss',
-        'stylelint-config-prettier-scss',
-      ],
+      extends: ['stylelint-config-recommended-scss'],
     },
     {
       files: ['**/*.vue'],
-      extends: [
-        'stylelint-config-recommended-scss',
-        'stylelint-config-prettier-scss',
-      ],
+      extends: ['stylelint-config-recommended-scss'],
       customSyntax: 'postcss-html',
       rules: {
         indentation: 2,
@@ -53,7 +45,6 @@ module.exports = {
       customSyntax: 'postcss-jsx',
       extends: [
         'stylelint-config-recommended-scss',
-        'stylelint-config-prettier-scss',
         'stylelint-config-styled-components',
       ],
       rules: {
