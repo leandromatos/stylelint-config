@@ -30,17 +30,18 @@ module.exports = {
     {
       files: ["**/*.scss"],
       customSyntax: "postcss-scss",
-      extends: ["stylelint-config-recommended-scss"],
+      extends: ["stylelint-config-recommended", "stylelint-config-recommended-scss"],
     },
     {
       files: ["**/*.vue"],
-      extends: ["stylelint-config-recommended-scss"],
+      extends: ["stylelint-config-recommended"],
       customSyntax: "postcss-html",
     },
     {
       files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
       customSyntax: "postcss-jsx",
-      extends: ["stylelint-config-recommended-scss", "stylelint-config-styled-components"],
+      processor: "",
+      extends: ["stylelint-config-recommended", "stylelint-config-styled-components"],
     },
   ],
 };
