@@ -14,7 +14,7 @@
     "postcss-jsx": "^0.36.4",
     "postcss-scss": "^4.0.6",
     "postcss-syntax": "^0.36.2",
-    "stylelint": "^15.3.0",
+    "stylelint": "^15.4.0",
     "stylelint-config-recommended": "^11.0.0",
     "stylelint-config-recommended-scss": "^9.0.1",
     "stylelint-config-styled-components": "^0.1.1"
