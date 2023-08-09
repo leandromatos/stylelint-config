@@ -9,14 +9,14 @@
   ],
   "dependencies": {
     "@stylelint/postcss-css-in-js": "^0.38.0",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.27",
     "postcss-html": "^1.5.0",
     "postcss-jsx": "^0.36.4",
     "postcss-scss": "^4.0.6",
     "postcss-syntax": "^0.36.2",
-    "stylelint": "^15.4.0",
-    "stylelint-config-recommended": "^11.0.0",
-    "stylelint-config-recommended-scss": "^9.0.1",
+    "stylelint": "^15.10.2",
+    "stylelint-config-recommended": "^13.0.0",
+    "stylelint-config-recommended-scss": "^12.0.0",
     "stylelint-config-styled-components": "^0.1.1"
   }
 }
