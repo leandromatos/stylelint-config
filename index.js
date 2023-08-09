@@ -39,9 +39,8 @@ module.exports = {
     },
     {
       files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
-      customSyntax: "postcss-jsx",
-      processor: "",
-      extends: ["stylelint-config-recommended", "stylelint-config-styled-components"],
+      customSyntax: "postcss-styled-syntax",
+      extends: ["stylelint-config-recommended"],
     },
   ],
 };
