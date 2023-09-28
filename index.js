@@ -1,5 +1,8 @@
 module.exports = {
-  extends: ["stylelint-config-recommended", "stylelint-config-tailwindcss"],
+  extends: [
+    "stylelint-config-recommended",
+    "stylelint-config-tailwindcss"
+  ],
   rules: {
     "alpha-value-notation": null,
     "at-rule-no-vendor-prefix": null,
@@ -31,20 +34,19 @@ module.exports = {
       files: ["**/*.scss"],
       customSyntax: "postcss-scss",
       extends: [
-        "stylelint-config-recommended",
         "stylelint-config-tailwindcss/scss",
         "stylelint-config-recommended-scss",
       ],
     },
     {
       files: ["**/*.vue"],
-      extends: ["stylelint-config-recommended", "stylelint-config-tailwindcss"],
       customSyntax: "postcss-html",
     },
     {
       files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
       customSyntax: "postcss-styled-syntax",
-      extends: ["stylelint-config-recommended", "stylelint-config-tailwindcss"],
+      extends: ["stylelint-config-styled-components"],
+      processors: ["stylelint-processor-styled-components"],
     },
   ],
 };

@@ -17,5 +17,9 @@
     "stylelint-config-recommended": "^13.0.0",
     "stylelint-config-recommended-scss": "^13.0.0",
     "stylelint-config-tailwindcss": "^0.0.7"
+  },
+  "devDependencies": {
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0"
   }
 }
