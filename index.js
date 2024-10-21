@@ -45,7 +45,6 @@ module.exports = {
     {
       files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
       customSyntax: "postcss-styled-syntax",
-      extends: ["stylelint-config-styled-components"],
     },
   ],
 };
