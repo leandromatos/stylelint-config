@@ -5,6 +5,7 @@ module.exports = {
   ],
   rules: {
     "alpha-value-notation": null,
+    "at-rule-no-deprecated": null,
     "at-rule-no-vendor-prefix": null,
     "color-function-notation": null,
     "color-hex-length": "long",
