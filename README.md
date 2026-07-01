@@ -1,6 +1,6 @@
 # Stylelint Config
 
-Personal [Stylelint](https://stylelint.io) configuration: the recommended rules tuned for SCSS, CSS-in-JS, and Tailwind CSS, in a single package.
+Personal [Stylelint](https://stylelint.io) configuration: the recommended rules tuned for SCSS, CSS-in-JS, and Tailwind CSS.
 
 ## ✨ Features
 
@@ -9,6 +9,7 @@ Personal [Stylelint](https://stylelint.io) configuration: the recommended rules 
 - **ESM, Stylelint 17** — ships as an ES module against the current Stylelint major.
 - **Reference by string** — extend the package name; there is no rule body to copy.
 - **Signal over noise** — keeps the rules that catch real problems and turns off the notation and vendor-prefix rules that only add friction.
+- **Formatting is Prettier's job** — Stylelint 15+ dropped its stylistic rules; this config lints for defects and leaves formatting to Prettier. Pairs with [@leandromatos/prettier-config](https://github.com/leandromatos/prettier-config).
 
 ## 🧭 How It Works
 
@@ -17,6 +18,8 @@ Stylelint resolves the string in your `extends` to this package and merges its r
 CSS is not the only input. Styles also live in `.scss` files and in tagged templates inside JS and TS. The config handles each through a file override that swaps the PostCSS syntax Stylelint parses with — `postcss-scss` for SCSS, `postcss-styled-syntax` for CSS-in-JS — so the same rule set applies across all three.
 
 Your own `rules` merge last, so anything you set overrides the defaults, shown under Configuration below.
+
+Formatting is not Stylelint's job. Since Stylelint 15 the stylistic rules are gone, so this config only flags defects and leaves layout to Prettier. You run Prettier to format and Stylelint to catch problems.
 
 ## 📦 Installation
 
@@ -44,6 +47,30 @@ Run Stylelint against your styles:
 yarn stylelint "**/*.{css,scss}"
 ```
 
+### Editor and lint-staged setup
+
+Stylelint checks quality; Prettier formats. Wire both so they do not overlap.
+
+VSCode, with the [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) and [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) extensions (`.vscode/settings.json`) — format with Prettier on save, and run Stylelint's fixes as a separate action:
+
+```json
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit"
+  }
+}
+```
+
+[lint-staged](https://github.com/lint-staged/lint-staged) (`lint-staged.config.mjs`) — Prettier writes first, then Stylelint fixes:
+
+```js
+export default {
+  '*.{css,scss}': ['prettier --write', 'stylelint --fix'],
+}
+```
+
 ## 🧩 What's Included
 
 The base extends the recommended and Tailwind configs, then switches syntax per file type:
@@ -54,16 +81,7 @@ The base extends the recommended and Tailwind configs, then switches syntax per 
 | `*.scss`                         | `postcss-scss`          | `stylelint-config-tailwindcss/scss`, `stylelint-config-recommended-scss` |
 | `*.js`, `*.jsx`, `*.ts`, `*.tsx` | `postcss-styled-syntax` | base rules                                                               |
 
-### Rule adjustments
-
-The config keeps `stylelint-config-recommended` and turns off the rules that flag style choices rather than defects — the notation rules (`alpha-value-notation`, `color-function-notation`, `hue-degree-notation`), the vendor-prefix rules, and the naming-pattern rules. A few are set rather than disabled:
-
-| Rule                                     | Value                      | Description                                      |
-| ---------------------------------------- | -------------------------- | ------------------------------------------------ |
-| `color-hex-length`                       | `long`                     | Full six-digit hex, not shorthand.               |
-| `font-family-name-quotes`                | `always-where-recommended` | Quote family names where a quote is recommended. |
-| `selector-attribute-quotes`              | `always`                   | Always quote attribute-selector values.          |
-| `selector-pseudo-element-colon-notation` | `single`                   | `:before`, not `::before`.                       |
+Beyond the presets, the config turns off the rules that police style rather than defects (notation and vendor-prefix rules) and sets a few conventions of its own. The exact rule set is in [`index.js`](index.js).
 
 ## ⚙️ Configuration
 
@@ -80,11 +98,11 @@ To change a rule, extend the config and add your own `rules` after it:
 
 ## 🏷️ Versioning
 
-Semver, published to npm. The peer range is Stylelint `>= 16`; a Stylelint major that changes rule behavior ships as a major here too. Snapshots publish as `X.Y.Z-snapshot.YYYYMMDD.N` to test a change before a stable release.
+Semver, published to npm. The peer range is Stylelint `>= 16`; a Stylelint major that changes rule behavior ships as a major here too. Snapshots publish to the `snapshot` dist-tag as `X.Y.Z-snapshot.YYYYMMDD.N`; stable releases go to `latest`.
 
 ## 🤝 Contributing
 
-Commits follow Conventional Commits, validated by [@leandromatos/commitlint-config](https://github.com/leandromatos/commitlint-config). Work on a `release/vMAJOR` branch and open a pull request. A release is a separate, explicit step: bump the version (the `snapshot-version-bump.sh` script for pre-releases), then push a `v*` tag, which the publish workflow picks up.
+This repository follows [Conventional Commits](https://www.conventionalcommits.org). See [CONTRIBUTING.md](CONTRIBUTING.md) for the workflow, releases, and local setup.
 
 ## 📄 License
 
