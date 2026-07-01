@@ -2,20 +2,38 @@
   "name": "@leandromatos/stylelint-config",
   "version": "3.6.1",
   "main": "index.js",
+  "type": "module",
   "repository": "https://github.com/leandromatos/stylelint-config",
   "author": "Leandro Matos",
+  "license": "MIT",
+  "publishConfig": {
+    "provenance": true,
+    "access": "public",
+    "tag": "latest"
+  },
+  "scripts": {
+    "prepare": "husky"
+  },
   "files": [
     "index.js"
   ],
   "dependencies": {
-    "postcss": "^8.5.3",
-    "postcss-html": "^1.8.0",
+    "postcss": "^8.5.16",
     "postcss-scss": "^4.0.9",
-    "postcss-styled-syntax": "^0.7.1",
-    "postcss-syntax": "^0.36.2",
-    "stylelint": "^16.18.0",
-    "stylelint-config-recommended": "^16.0.0",
-    "stylelint-config-recommended-scss": "^14.1.0",
-    "stylelint-config-tailwindcss": "^1.0.0"
+    "postcss-styled-syntax": "^0.7.2",
+    "stylelint-config-recommended": "^18.0.0",
+    "stylelint-config-recommended-scss": "^17.0.1",
+    "stylelint-config-tailwindcss": "^1.0.1"
+  },
+  "peerDependencies": {
+    "stylelint": ">=16"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.0",
+    "@leandromatos/commitlint-config": "^0.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "prettier": "^3.9.4",
+    "stylelint": "^17.14.0"
   }
 }
