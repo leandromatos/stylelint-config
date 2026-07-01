@@ -32,7 +32,7 @@ const config = {
     {
       files: ['**/*.scss'],
       customSyntax: 'postcss-scss',
-      extends: ['stylelint-config-tailwindcss/scss', 'stylelint-config-recommended-scss'],
+      extends: ['stylelint-config-recommended-scss', 'stylelint-config-tailwindcss'],
     },
     {
       files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],

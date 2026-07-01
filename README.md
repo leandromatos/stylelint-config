@@ -75,11 +75,11 @@ export default {
 
 The base extends the recommended and Tailwind configs, then switches syntax per file type:
 
-| Files                            | Syntax                  | Extends                                                                  |
-| -------------------------------- | ----------------------- | ------------------------------------------------------------------------ |
-| `*.css` (default)                | —                       | `stylelint-config-recommended`, `stylelint-config-tailwindcss`           |
-| `*.scss`                         | `postcss-scss`          | `stylelint-config-tailwindcss/scss`, `stylelint-config-recommended-scss` |
-| `*.js`, `*.jsx`, `*.ts`, `*.tsx` | `postcss-styled-syntax` | base rules                                                               |
+| Files                            | Syntax                  | Extends                                                             |
+| -------------------------------- | ----------------------- | ------------------------------------------------------------------- |
+| `*.css` (default)                | —                       | `stylelint-config-recommended`, `stylelint-config-tailwindcss`      |
+| `*.scss`                         | `postcss-scss`          | `stylelint-config-recommended-scss`, `stylelint-config-tailwindcss` |
+| `*.js`, `*.jsx`, `*.ts`, `*.tsx` | `postcss-styled-syntax` | base rules                                                          |
 
 Beyond the presets, the config turns off the rules that police style rather than defects (notation and vendor-prefix rules) and sets a few conventions of its own. The exact rule set is in [`index.js`](index.js).
 
