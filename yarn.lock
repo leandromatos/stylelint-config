@@ -554,18 +554,18 @@
   resolved "https://registry.yarnpkg.com/@keyv/serialize/-/serialize-1.1.1.tgz#0c01dd3a3483882af7cf3878d4e71d505c81fc4a"
   integrity sha512-dXn3FZhPv0US+7dtJsIi2R+c7qWYiReoEh5zUntWCf4oSpMNib8FDhSoed6m3QyZdx5hK7iLFkYk3rNxwt8vTA==
 
-"@leandromatos/commitlint-config@^0.6.0-snapshot.20260705.1":
-  version "0.6.0-snapshot.20260705.1"
-  resolved "https://registry.yarnpkg.com/@leandromatos/commitlint-config/-/commitlint-config-0.6.0-snapshot.20260705.1.tgz#502aaae3a0e074b810e71068bc8b7574ef9b9c82"
-  integrity sha512-XGs8RV/2roXTeqan1tQzn9Hrq2UMV7KCTXEix8NBAWlw0H1g8BQGDZNgCT3daC5ak3xh9MWIEWpbbWrQcYuUiQ==
+"@leandromatos/commitlint-config@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@leandromatos/commitlint-config/-/commitlint-config-1.0.1.tgz#f3f61f40570cf44146e18067ee75ade85f3b1111"
+  integrity sha512-JlxGBnva8OpwJJPxZaoYK0LSPNvzslK8nMC9f2k3rph8D0Pm/8DLhIjQ0M02j12D3Vnc4Hln68VvViUQeiZRDA==
   dependencies:
     "@commitlint/cli" "^21.2.0"
     "@commitlint/config-conventional" "^21.2.0"
 
-"@leandromatos/eslint-config@^3.0.0-snapshot.20260705.1":
-  version "3.0.0-snapshot.20260705.1"
-  resolved "https://registry.yarnpkg.com/@leandromatos/eslint-config/-/eslint-config-3.0.0-snapshot.20260705.1.tgz#e488b091bce5759dbd7f1da18a6f5ab9933f426b"
-  integrity sha512-ulZH4pD7U1Bgz0n2Ox9ll5BngCfbQFHsRyvBn53EXKEoAnumrseKLGnGktEwJ0JzvKNWUBiXlUFO9bQ+YfzV+w==
+"@leandromatos/eslint-config@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@leandromatos/eslint-config/-/eslint-config-3.0.1.tgz#8671e6fa7192b75e76af8c6a01fd36c12b8ad339"
+  integrity sha512-wmRS1moshr7Kr/CuIRXCSdd3RvmIEmLoUoVDJkC41OGPvSwf3xVbjMyzIDGbs4PiNYxcW5OhX6TGhh1U+Fys/Q==
   dependencies:
     "@eslint/js" "^10.0.1"
     "@eslint/markdown" "^8.0.3"
@@ -579,10 +579,10 @@
     globals "^17.7.0"
     typescript-eslint "^8.62.1"
 
-"@leandromatos/prettier-config@^2.0.0-snapshot.20260705.1":
-  version "2.0.0-snapshot.20260705.1"
-  resolved "https://registry.yarnpkg.com/@leandromatos/prettier-config/-/prettier-config-2.0.0-snapshot.20260705.1.tgz#0b344971b84d701f670aac516134b97838cf10ef"
-  integrity sha512-Q1oIBkwKWENe/gRb1tUyxb5chnM95yqHD+hWonvHfAlv55Lka4zOOiqaUquDzzKmT5g45f6kcOHMuESIxStY8Q==
+"@leandromatos/prettier-config@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@leandromatos/prettier-config/-/prettier-config-2.0.1.tgz#0646a3397e35cea78305e2e579eb1dbfb56d8f1b"
+  integrity sha512-Ppf27nKS3yZ+MJPU793n4csD52z/mNWMvqN0F7alUSBurHBjNG3fG5PjRCz6hUr26JtkodfwtZdHHTTso6690Q==
   dependencies:
     prettier-plugin-tailwindcss "^0.8.0"
 
