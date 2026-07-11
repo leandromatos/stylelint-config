@@ -1,6 +1,6 @@
 {
   "name": "@leandromatos/stylelint-config",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Stylelint configuration for SCSS, CSS-in-JS, and Tailwind CSS.",
   "keywords": [
     "stylelint",
@@ -36,7 +36,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "postcss": "^8.5.16",
+    "postcss": "^8.5.17",
     "postcss-scss": "^4.0.9",
     "postcss-styled-syntax": "^0.7.2",
     "stylelint-config-recommended": "^18.0.0",
@@ -47,18 +47,18 @@
     "stylelint": ">=16"
   },
   "devDependencies": {
-    "@commitlint/cli": "^21.2.0",
+    "@commitlint/cli": "^21.2.1",
     "@leandromatos/commitlint-config": "^1.0.1",
     "@leandromatos/eslint-config": "^3.0.1",
     "@leandromatos/prettier-config": "^2.0.1",
-    "@vitest/coverage-v8": "^4.1.9",
-    "@vitest/ui": "^4.1.9",
-    "eslint": "^10.6.0",
+    "@vitest/coverage-v8": "^4.1.10",
+    "@vitest/ui": "^4.1.10",
+    "eslint": "^10.7.0",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.8",
-    "prettier": "^3.9.4",
+    "prettier": "^3.9.5",
     "stylelint": "^17.14.0",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.9"
+    "vitest": "^4.1.10"
   }
 }
