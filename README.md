@@ -7,6 +7,7 @@ Personal [Stylelint](https://stylelint.io) configuration: the recommended rules 
 - **One linter config, every project** — a single source of truth for Stylelint rules, so style linting never drifts between repositories.
 - **SCSS, CSS-in-JS, and Tailwind** — the recommended rules plus the syntaxes and configs for `.scss`, styled-components, and Tailwind, wired through per-file overrides.
 - **ESM, Stylelint 17** — ships as an ES module against the current Stylelint major.
+- **Typed** — publishes type declarations, so importing it from TypeScript gives you a checked `Config` instead of an implicit `any`.
 - **Reference by string** — extend the package name; there is no rule body to copy.
 - **Signal over noise** — keeps the rules that catch real problems and turns off the notation and vendor-prefix rules that only add friction.
 - **Formatting is Prettier's job** — Stylelint 15+ dropped its stylistic rules; this config lints for defects and leaves formatting to Prettier. Pairs with [@leandromatos/prettier-config](https://github.com/leandromatos/prettier-config).
@@ -30,6 +31,8 @@ yarn add --dev stylelint @leandromatos/stylelint-config
 ```
 
 Stylelint `>= 16` is a peer dependency, so you bring your own. The SCSS, Tailwind, and PostCSS syntax packages ship with the config.
+
+Node `>= 22.12.0` is required.
 
 ## 🚀 Quick Start
 
@@ -98,7 +101,7 @@ To change a rule, extend the config and add your own `rules` after it:
 
 ## 🏷️ Versioning
 
-Semver, published to npm. The peer range is Stylelint `>= 16`; a Stylelint major that changes rule behavior ships as a major here too. Snapshots publish to the `snapshot` dist-tag as `X.Y.Z-snapshot.YYYYMMDD.N`; stable releases go to `latest`.
+Semver, published to npm. The peer range is Stylelint `>= 16` on Node `>= 22.12.0`; a Stylelint major that changes rule behavior ships as a major here too. Snapshots publish to the `snapshot` dist-tag as `X.Y.Z-snapshot.YYYYMMDD.N`; stable releases go to `latest`.
 
 ## 🤝 Contributing
 
