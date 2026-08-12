@@ -6,7 +6,7 @@ Personal [Stylelint](https://stylelint.io) configuration: the recommended rules 
 
 - **One linter config, every project** — a single source of truth for Stylelint rules, so style linting never drifts between repositories.
 - **SCSS, CSS-in-JS, and Tailwind** — the recommended rules plus the syntaxes and configs for `.scss`, styled-components, and Tailwind, wired through per-file overrides.
-- **ESM, Stylelint 17** — ships as an ES module against the current Stylelint major.
+- **ESM, Stylelint 16+** — ships as an ES module against the Stylelint majors the peer range accepts.
 - **Typed** — publishes type declarations, so importing it from TypeScript gives you a checked `Config` instead of an implicit `any`.
 - **Reference by string** — extend the package name; there is no rule body to copy.
 - **Signal over noise** — keeps the rules that catch real problems and turns off the notation and vendor-prefix rules that only add friction.
