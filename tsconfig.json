@@ -12,5 +12,5 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["eslint.config.mts", "src/index.js"]
+  "include": ["eslint.config.mts", "src/index.js", "types/**/*.d.ts"]
 }

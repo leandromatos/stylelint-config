@@ -84,6 +84,8 @@ The base extends the recommended and Tailwind configs, then switches syntax per 
 | `*.scss`                         | `postcss-scss`          | `stylelint-config-recommended-scss`, `stylelint-config-tailwindcss` |
 | `*.js`, `*.jsx`, `*.ts`, `*.tsx` | `postcss-styled-syntax` | base rules                                                          |
 
+Each syntax is imported and passed as a value rather than named as a string, and that is deliberate. Stylelint resolves a `customSyntax` string from the linted project's root, not from the config that asked for it, so a bare name only works when the package manager happens to hoist the syntax there — pnpm does not. Importing it means the dependency this package declares is the one that loads, whatever the consumer installs with. `plugins` needs no such treatment: Stylelint resolves those relative to the config file.
+
 Beyond the presets, the config turns off the rules that police style rather than defects (notation and vendor-prefix rules) and sets a few conventions of its own. The exact rule set is in [`src/index.js`](src/index.js).
 
 ## ⚙️ Configuration
