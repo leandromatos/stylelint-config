@@ -4,19 +4,19 @@ Personal [Stylelint](https://stylelint.io) configuration: the recommended rules 
 
 ## ✨ Features
 
-- **One linter config, every project** — a single source of truth for Stylelint rules, so style linting never drifts between repositories.
-- **SCSS, CSS-in-JS, and Tailwind** — the recommended rules plus the syntaxes and configs for `.scss`, styled-components, and Tailwind, wired through per-file overrides.
-- **ESM, Stylelint 16+** — ships as an ES module against the Stylelint majors the peer range accepts.
-- **Typed** — publishes type declarations, so importing it from TypeScript gives you a checked `Config` instead of an implicit `any`.
-- **Reference by string** — extend the package name; there is no rule body to copy.
-- **Signal over noise** — keeps the rules that catch real problems and turns off the notation and vendor-prefix rules that only add friction.
-- **Formatting is Prettier's job** — Stylelint 15+ dropped its stylistic rules; this config lints for defects and leaves formatting to Prettier. Pairs with [@leandromatos/prettier-config](https://github.com/leandromatos/prettier-config).
+- **One linter config, every project.** A single source of truth for Stylelint rules, so style linting never drifts between repositories.
+- **SCSS, CSS-in-JS, and Tailwind.** The recommended rules plus the syntaxes and configs for `.scss`, styled-components, and Tailwind, wired through per-file overrides.
+- **ESM, Stylelint 16+.** Ships as an ES module against the Stylelint majors the peer range accepts.
+- **Typed.** Publishes type declarations, so importing it from TypeScript gives you a checked `Config` instead of an implicit `any`.
+- **Reference by string.** Extend the package name; there is no rule body to copy.
+- **Signal over noise.** Keeps the rules that catch real problems and turns off the notation and vendor-prefix rules that only add friction.
+- **Formatting is Prettier's job.** Stylelint 15+ dropped its stylistic rules; this config lints for defects and leaves formatting to Prettier. Pairs with [@leandromatos/prettier-config](https://github.com/leandromatos/prettier-config).
 
 ## 🧭 How It Works
 
 Stylelint resolves the string in your `extends` to this package and merges its rules beneath yours, the same way it resolves any shareable config. The base layer extends `stylelint-config-recommended` and `stylelint-config-tailwindcss`, then relaxes the rules that police style rather than defects.
 
-CSS is not the only input. Styles also live in `.scss` files and in tagged templates inside JS and TS. The config handles each through a file override that swaps the PostCSS syntax Stylelint parses with — `postcss-scss` for SCSS, `postcss-styled-syntax` for CSS-in-JS — so the same rule set applies across all three.
+CSS is not the only input. Styles also live in `.scss` files and in tagged templates inside JS and TS. The config handles each through a file override that swaps the PostCSS syntax Stylelint parses with, `postcss-scss` for SCSS and `postcss-styled-syntax` for CSS-in-JS, so the same rule set applies across all three.
 
 Your own `rules` merge last, so anything you set overrides the defaults, shown under Configuration below.
 
@@ -54,7 +54,7 @@ yarn stylelint "**/*.{css,scss}"
 
 Stylelint checks quality; Prettier formats. Wire both so they do not overlap.
 
-VSCode, with the [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) and [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) extensions (`.vscode/settings.json`) — format with Prettier on save, and run Stylelint's fixes as a separate action:
+VSCode, with the [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) and [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) extensions (`.vscode/settings.json`). Format with Prettier on save, and run Stylelint's fixes as a separate action:
 
 ```json
 {
@@ -66,7 +66,7 @@ VSCode, with the [Prettier](https://marketplace.visualstudio.com/items?itemName=
 }
 ```
 
-[lint-staged](https://github.com/lint-staged/lint-staged) (`lint-staged.config.mjs`) — Prettier writes first, then Stylelint fixes:
+[lint-staged](https://github.com/lint-staged/lint-staged) (`lint-staged.config.mjs`), where Prettier writes first and Stylelint fixes after:
 
 ```js
 export default {
@@ -80,11 +80,11 @@ The base extends the recommended and Tailwind configs, then switches syntax per 
 
 | Files                            | Syntax                  | Extends                                                             |
 | -------------------------------- | ----------------------- | ------------------------------------------------------------------- |
-| `*.css` (default)                | —                       | `stylelint-config-recommended`, `stylelint-config-tailwindcss`      |
+| `*.css` (default)                | none                    | `stylelint-config-recommended`, `stylelint-config-tailwindcss`      |
 | `*.scss`                         | `postcss-scss`          | `stylelint-config-recommended-scss`, `stylelint-config-tailwindcss` |
 | `*.js`, `*.jsx`, `*.ts`, `*.tsx` | `postcss-styled-syntax` | base rules                                                          |
 
-Each syntax is imported and passed as a value rather than named as a string, and that is deliberate. Stylelint resolves a `customSyntax` string from the linted project's root, not from the config that asked for it, so a bare name only works when the package manager happens to hoist the syntax there — pnpm does not. Importing it means the dependency this package declares is the one that loads, whatever the consumer installs with. `plugins` needs no such treatment: Stylelint resolves those relative to the config file.
+Each syntax is imported and passed as a value rather than named as a string, and that is deliberate. Stylelint resolves a `customSyntax` string from the linted project's root, not from the config that asked for it, so a bare name only works when the package manager happens to hoist the syntax there, and pnpm does not. Importing it means the dependency this package declares is the one that loads, whatever the consumer installs with. `plugins` needs no such treatment: Stylelint resolves those relative to the config file.
 
 Beyond the presets, the config turns off the rules that police style rather than defects (notation and vendor-prefix rules) and sets a few conventions of its own. The exact rule set is in [`src/index.js`](src/index.js).
 
