@@ -62,5 +62,14 @@ describe('stylelint-config', () => {
       expect(rulesOf(result)).not.toContain('at-rule-no-unknown')
       expect(rulesOf(result)).not.toContain('scss/at-rule-no-unknown')
     })
+
+    it('accepts utility classes in @apply', async () => {
+      // CSS now drafts a native @apply that takes a mixin name, and css-tree learns its
+      // grammar from @csstools/css-syntax-patches-for-csstree. Checked against that
+      // grammar, Tailwind's list of classes is an invalid prelude.
+      const result = await lint('.a {\n  @apply rounded-md px-4 py-2;\n}\n')
+
+      expect(rulesOf(result)).not.toContain('at-rule-prelude-no-invalid')
+    })
   })
 })

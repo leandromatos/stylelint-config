@@ -13,6 +13,11 @@ import * as postcssStyledSyntax from 'postcss-styled-syntax'
  *
  * `plugins` needs no such treatment: Stylelint resolves those relative to the config file.
  *
+ * `at-rule-prelude-no-invalid` ignores `apply` on top of the `media` that
+ * stylelint-config-recommended ignores. CSS drafts a native `@apply` that takes a mixin name, and
+ * css-tree checks every `@apply` against that grammar, so Tailwind's list of classes reads as an
+ * invalid prelude.
+ *
  * @type {import('stylelint').Config}
  */
 const config = {
@@ -21,6 +26,7 @@ const config = {
     'alpha-value-notation': null,
     'at-rule-no-deprecated': null,
     'at-rule-no-vendor-prefix': null,
+    'at-rule-prelude-no-invalid': [true, { ignoreAtRules: ['media', 'apply'] }],
     'color-function-notation': null,
     'color-hex-length': 'long',
     'custom-property-empty-line-before': null,
