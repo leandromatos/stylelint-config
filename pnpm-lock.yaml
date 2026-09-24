@@ -192,8 +192,8 @@ importers:
         specifier: ^1.1.1
         version: 1.1.1
       '@leandromatos/eslint-config':
-        specifier: ^4.0.0-snapshot.20260923.1
-        version: 4.0.0-snapshot.20260923.1(eslint@10.11.0(jiti@2.6.1)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@6.0.3)
+        specifier: ^4.0.0
+        version: 4.0.0(eslint@10.11.0(jiti@2.6.1)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@6.0.3)
       '@leandromatos/prettier-config':
         specifier: ^2.1.1
         version: 2.1.1(prettier@3.9.9)
@@ -548,8 +548,8 @@ packages:
     resolution: {integrity: sha512-KMYQvX9WCYkCRz2xo7ec4U3sRdAJ0ZRsQyvdDfiLCLhxonWpCqdJMzjGB974tHGW7uP9D2aJNDDvfacG1qD+0g==}
     engines: {node: '>=22.12.0'}
 
-  '@leandromatos/eslint-config@4.0.0-snapshot.20260923.1':
-    resolution: {integrity: sha512-MII/mSYfB4tUYTJHjHrJ36hEhp8YIXC8PplT4cWFgaddZkgPju7qM3tbYm44CmuFo3yOIJfppqXjKKUcHfzNpQ==}
+  '@leandromatos/eslint-config@4.0.0':
+    resolution: {integrity: sha512-DkxpWH5J7ttL0H9vFONew1xeWXBcRADFpI5PBIVyUpbLASeFtIyh6h1V9GyLil6ciOHdfRwjWIc0A8bDIPmRFQ==}
     engines: {node: '>=22.12.0'}
     peerDependencies:
       eslint: '>=10'
@@ -3452,7 +3452,7 @@ snapshots:
       '@commitlint/config-conventional': 21.2.3
       '@commitlint/types': 21.2.3
 
-  '@leandromatos/eslint-config@4.0.0-snapshot.20260923.1(eslint@10.11.0(jiti@2.6.1)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@6.0.3)':
+  '@leandromatos/eslint-config@4.0.0(eslint@10.11.0(jiti@2.6.1)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@6.0.3)':
     dependencies:
       '@eslint/js': 10.0.1(eslint@10.11.0(jiti@2.6.1)(supports-color@10.2.2))
       '@eslint/markdown': 8.0.3(supports-color@10.2.2)
